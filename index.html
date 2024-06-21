@@ -49,12 +49,12 @@
             </li>
           </ul>
         </address>
-        <button type="button" class="open-menu-btn"><svg width="24" height="24"><use href="./images/icons.svg#icon-header-menu"></use></svg></button>
+        <button type="button" class="open-menu-btn" data-modal-open-mob><svg width="24" height="24"><use href="./images/icons.svg#icon-header-menu"></use></svg></button>
       </div>
-      <div class="mob-menu">
-      <div>
-          <button type="button" class="close-menu-btn"><svg class="modal-close-icon" width="8" height="8"><use href="./images/icons.svg#icon-close"></use></svg></button>
-        <nav>
+      <div class="mob-menu" data-modal-mob>
+        <div>
+          <button type="button" class="close-menu-btn" data-modal-close-mob><svg class="modal-close-icon" width="8" height="8"><use href="./images/icons.svg#icon-close"></use></svg></button>
+          <nav>
           <ul class="mob-menu-list">
             <li class="mob-menu-item">
               <a class="mob-menu-link mob-studio-link" href="./index.html">Studio</a>
@@ -67,7 +67,7 @@
             </li>
           </ul>
         </nav>
-      </div>
+        </div>
       <div class="mob-menu-box">
         <address class="mob-contacts">
           <ul class="mob-contacts-list">
@@ -505,65 +505,91 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="container footer-box">
-        <div class="footer-container footer-it">
+      <div class="container footer-container">
+        <div class="box-footer-logo">
           <a class="footer-logo" href="./index.html"
-            >Web<span class="footer-logo-white">Studio</span></a
-          >
+            >Web<span class="footer-logo-color">Studio</span>
+          </a>
           <p class="footer-text">
             Increase the flow of customers and sales for your business with
             digital marketing & growth solutions.
           </p>
         </div>
-        <div class="footer-container-social ">
+
+        <div class="box-footer-social">
           <p class="footer-social-text">Social media</p>
-          <ul class="footer-icon-list">
-            <li class="footer-icon-item">
-              <a href="" class="footer-icon-link">
-                <svg class="footer-icon" width="24" height="24">
+
+          <ul class="address-footer-list">
+            <li class="address-footer-item">
+              <a
+                class="address-footer-link"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg class="address-social" width="24" height="24">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-icon-item">
-              <a href="" class="footer-icon-link">
-                <svg class="footer-icon" width="24" height="24">
+            <li class="address-footer-item">
+              <a
+                class="address-footer-link"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg class="address-social" width="24" height="24">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-icon-item">
-              <a href="" class="footer-icon-link">
-                <svg class="footer-icon" width="24" height="24">
+            <li class="address-footer-item">
+              <a
+                class="address-footer-link"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg class="address-social" width="24" height="24">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-icon-item">
-              <a href="" class="footer-icon-link">
-                <svg class="footer-icon" width="24" height="24">
+            <li class="address-footer-item">
+              <a
+                class="address-footer-link"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg class="address-social" width="24" height="24">
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
               </a>
             </li>
           </ul>
-        </div> 
-        <div class="subscribe-footer footer-it">
-          <p class="subscribe">Subscribe</p>
-          <form class="subscribe-form">
-              <label class="subscribe-email">
-                  <input class="subscribe-input" type="email" name="subscribe" placeholder="E-mail">
-              </label>
-              <button class="subscribe-button" type="submit">Subscribe
+        </div>
+
+        <div class="footer-subscribe">
+          <p class="subscribe-text">Subscribe</p>
+          
+          <form class="footer-form">
+              <label class="footer-label" for="email" aria-label="email">
+              <input
+                    class="footer-input"
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="E-mail"
+                  />
+                  </label>
+                <button class="footer-form-btn" type="submit">Subscribe 
                   <svg class="subscribe-icon" width="24" height="24">
-                      <use class="subscribe-wrap" href="./images/icons.svg#icon-tg"></use>
-                  </svg>
-              </button>
+                  <use href="./images/icons.svg#icon-tg"></use>
+                </svg></button>
           </form>
-      </div>
+        </div>
+
       </div>
     </footer>
-    <div class="backdrop is-open" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close><svg  class="modal-close-icon" width="8" height="8"><use href="./images/icons.svg#icon-close"></use></svg></button>
       <p class="modal-title">Leave your contacts and we will call you back</p>
@@ -611,5 +637,6 @@
     </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/modal-mob.js"></script>
   </body>
 </html>
